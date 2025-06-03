@@ -1,3 +1,0 @@
-card_data_tiny.csv
-1
-4

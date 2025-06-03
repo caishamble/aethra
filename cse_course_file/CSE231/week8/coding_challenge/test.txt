@@ -1,5 +1,0 @@
-Name,grade
-Alice,85
-Bob,75
-Zane,100
-Xiangbo,36
