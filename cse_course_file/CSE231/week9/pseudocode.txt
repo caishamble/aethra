@@ -1,0 +1,93 @@
+"""
+CSE 231 - Project 6 (Part 1) | Pseudocode
+
+1. open_file( filename )
+  try:
+    open the file, read the file and return file pointer
+  except FileNotFoundError:
+    print error message and return None
+
+2. read_files() - read three files and return a nested dictionary:
+        read the names file into a list
+        read the X file into a list of friends
+        read the Facebook file into a list of friends
+        construct a nested dictionary in the format:
+            {name: {X: [friends], Facebook: [friends]}}
+        close all files
+        return the nested dictionary
+
+3. print_menu() - print the menu of choices
+
+4. main()
+    call open_file() to open the names file
+    if the file is not found, exit the program
+    call read_files() to read the X and Facebook files
+    call print_menu() to print the menu of choices
+    prompt the user to enter a choice
+    while the choice is valid,
+        if the choice is 1,
+            call largest_intersection() to find the largest intersection between X and Facebook friends
+            print the result
+        if the choice is 2,
+            call percentage_no_shared_friends() to calculate the percentage of people with no shared friends
+            print the result
+        if the choice is 3,
+            call display_individual_friends() to display the X and Facebook friends of a given individual
+        if the choice is 4,
+            call percentage_more_friends_in_X() to calculate the percentage of people with more friends in X compared to Facebook
+            print the result
+        if the choice is 5,
+            call count_triangles() to count triangle friendships in X
+            print the result
+        if the choice is 6,
+            call count_triangles() to count triangle friendships in Facebook
+            print the result
+        if the choice is 7,
+            call count_triangles() to count triangle friendships in X, Facebook, and their merged network
+            print the result
+        call print_menu() to print the menu of choices
+        prompt the user to enter a choice
+    print "Thank you" and exit the program
+
+5. percentage_no_shared_friends() - calculate the percentage of people with no shared friends:
+        for each individual, 
+          find the intersection between X and Facebook friends
+          count the number of individuals with no shared friends
+        calculate and return the percentage
+
+6. display_individual_friends() - display the X and Facebook friends of a given individual:
+        prompt the user to enter a name
+        if valid,
+          print the X and Facebook friends of that name
+        else,
+          prompt again until a valid name is entered
+        return the name
+
+7.  largest_intersection() - find the largest intersection between X and Facebook friends:
+        for each individual in the nested dictionary
+          for each friend in X
+            for each friend in Facebook
+              if freiend in X is equal to friend in Facebook
+                int = intersection of X and Facebook   
+          if the intersection is larger than the previous largest,
+            update it
+        return the size of the largest intersection
+
+8. Define a function to count triangle friendships in X, Facebook, and their merged network:
+    count_triangles()
+        Initialize count_x, count_facebook, and count_merged to 0
+        Initialize sets for triangle friendships in X, Facebook, and merged networks
+
+        For each individual:
+            Count the number of triangle friendships in X and add to count_x
+            Add the triangle friendships to the X set
+
+            Count the number of triangle friendships in Facebook and add to count_facebook
+            Add the triangle friendships to the Facebook set
+
+        For each element in the X set:
+            If the element is also in the Facebook set:
+                Increment count_merged
+
+        Return count_x, count_facebook, and count_merged along with their respective sets
+"""

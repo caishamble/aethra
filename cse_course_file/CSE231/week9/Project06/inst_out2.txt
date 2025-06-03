@@ -1,0 +1,147 @@
+
+Enter a names file ~:names
+Error. File does not exist
+
+Enter a names file ~:Names.csv
+
+Enter the twitter id file ~:friends
+Error. File does not exist
+
+Enter the twitter id file ~:twt_Friends_id_1.txt
+
+Enter the facebook id file ~:fb_Friends_1.txt
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:1
+The Max number intersection of friends between X and Facebook is: 2
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:2
+72% of people have no friends in common on X and Facebook
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:3
+Enter a person's name ~:Ricjjhard Horn
+Invalid name or does not exist
+Enter a person's name ~:Richjhggard Horn
+Invalid name or does not exist
+Enter a person's name ~:Richard Horn
+--------------
+Friends in X
+**************
+Christopher Allen
+Dr. Stephanie Hall MD
+Eric Fletcher
+Erika Salazar
+Ethan Aguirre
+Jeffrey Moon
+Mark Mercado
+Michael Park
+Patricia Henson
+Tiffany Avery
+--------------------
+Friends in Facebook
+********************
+Jeremy Burke
+Richard Green
+Samantha Murray
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:4
+75% of people have more friends in X compared to Facebook
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:5
+The number of triangle friendships in X is: 135
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:6
+The number of triangle friendships in Facebook is: 55
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:7
+The number of triangle friendships in X merged with Facebook is:  665
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:dd
+Thank you

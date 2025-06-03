@@ -1,0 +1,134 @@
+Enter the filename of the puzzle you want to play: vowel.csv
+
+Across
+(0, 2) Across: Like some water
+(1, 1) Across: Poses are done for it
+(2, 0) Across: What's found alternating in every answer in this grid ... and every clue except this one
+(3, 0) Across: Yeses, on a marine voyage
+(4, 0) Across: Negative separator
+
+Down
+(0, 2) Down: Pisa has a noted one
+(0, 3) Down: Forever
+(0, 4) Down: Bud, amigo, mate
+(1, 1) Down: Waver, or a toy
+(2, 0) Down: Ride for a mover
+     0    1    2    3    4
+  |---------------------------
+0 |  ■    ■    _    _    _  
+1 |  ■    _    _    _    _  
+2 |  _    _    _    _    _  
+3 |  _    _    _    _    ■  
+4 |  _    _    _    ■    ■  
+
+
+Crossword Puzzler -- Press H at any time to bring up this menu
+C n - Display n of the current puzzle's down and across clues
+G i j A/D - Make a guess for the clue starting at row i, column j
+R i j A/D - Reveal the answer for the clue starting at row i, column j
+T i j A/D - Gives a hint (first wrong letter) for the clue starting at row i, column j
+H - Display the menu
+S - Restart the game
+Q - Quit the program
+
+Enter option: C 2
+
+Across
+(0, 2) Across: Like some water
+(1, 1) Across: Poses are done for it
+
+Down
+(0, 2) Down: Pisa has a noted one
+(0, 3) Down: Forever
+
+Enter option: G 0 2 A
+Enter your guess (use _ for blanks): tea
+     0    1    2    3    4
+  |---------------------------
+0 |  ■    ■    T    E    A  
+1 |  ■    _    _    _    _  
+2 |  _    _    _    _    _  
+3 |  _    _    _    _    ■  
+4 |  _    _    _    ■    ■  
+
+
+Enter option: G 1 1 D
+Enter your guess (use _ for blanks): team
+     0    1    2    3    4
+  |---------------------------
+0 |  ■    ■    T    E    A  
+1 |  ■    T    _    _    _  
+2 |  _    E    _    _    _  
+3 |  _    A    _    _    ■  
+4 |  _    M    _    ■    ■  
+
+
+Enter option: R 2 0 D
+     0    1    2    3    4
+  |---------------------------
+0 |  ■    ■    T    E    A  
+1 |  ■    T    _    _    _  
+2 |  V    E    _    _    _  
+3 |  A    A    _    _    ■  
+4 |  N    M    _    ■    ■  
+
+
+Enter option: T 1 1 D
+Letter 1 is wrong, it should be Y
+
+Enter option: R 1 1 D
+     0    1    2    3    4
+  |---------------------------
+0 |  ■    ■    T    E    A  
+1 |  ■    Y    _    _    _  
+2 |  V    O    _    _    _  
+3 |  A    Y    _    _    ■  
+4 |  N    O    _    ■    ■  
+
+
+Enter option: H
+
+Crossword Puzzler -- Press H at any time to bring up this menu
+C n - Display n of the current puzzle's down and across clues
+G i j A/D - Make a guess for the clue starting at row i, column j
+R i j A/D - Reveal the answer for the clue starting at row i, column j
+T i j A/D - Gives a hint (first wrong letter) for the clue starting at row i, column j
+H - Display the menu
+S - Restart the game
+Q - Quit the program
+
+Enter option: S
+Enter the filename of the puzzle you want to play: vowel.csv
+
+Across
+(0, 2) Across: Like some water
+(1, 1) Across: Poses are done for it
+(2, 0) Across: What's found alternating in every answer in this grid ... and every clue except this one
+(3, 0) Across: Yeses, on a marine voyage
+(4, 0) Across: Negative separator
+
+Down
+(0, 2) Down: Pisa has a noted one
+(0, 3) Down: Forever
+(0, 4) Down: Bud, amigo, mate
+(1, 1) Down: Waver, or a toy
+(2, 0) Down: Ride for a mover
+     0    1    2    3    4
+  |---------------------------
+0 |  ■    ■    _    _    _  
+1 |  ■    _    _    _    _  
+2 |  _    _    _    _    _  
+3 |  _    _    _    _    ■  
+4 |  _    _    _    ■    ■  
+
+
+Crossword Puzzler -- Press H at any time to bring up this menu
+C n - Display n of the current puzzle's down and across clues
+G i j A/D - Make a guess for the clue starting at row i, column j
+R i j A/D - Reveal the answer for the clue starting at row i, column j
+T i j A/D - Gives a hint (first wrong letter) for the clue starting at row i, column j
+H - Display the menu
+S - Restart the game
+Q - Quit the program
+
+Enter option: Q

@@ -1,0 +1,39 @@
+"Magnitude: {}"
+"\nAngle: {}"
+"\nBoth objects must be of the Force class"
+"\nForce object {} already exists!"
+"\nForce object {} does not exist!"
+"\nForce #{}: {}"
+"\n{}"
+
+"\n:~Enter value for {}~:"
+"\nInput {} is not a valid float number!"
+"\n:~Enter name of force~:"
+"Magnitude (N)"
+"Angle (degrees)"
+"\nForce objects in the calculator"
+"\nThere are no force objects in the calculator."
+
+"\nForce components for Force object {}:")
+"\nMagnitude: {}"
+"\nFx = {}"
+"\nFy = {}"
+
+"\nResultant force of all forces in the calculator"
+
+"\nInvalid option. Please Try Again!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

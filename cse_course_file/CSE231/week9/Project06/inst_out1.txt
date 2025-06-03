@@ -1,0 +1,146 @@
+
+Enter a names file ~:names
+Error. File does not exist
+
+Enter a names file ~:Names.csv
+
+Enter the twitter id file ~:friends
+Error. File does not exist
+
+Enter the twitter id file ~:twt_Friends_id.txt
+
+Enter the facebook id file ~:facebook
+Error. File does not exist
+
+Enter the facebook id file ~:fb_Friends.txt
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:1
+The Max number intersection of friends between X and Facebook is: 1
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:2
+98% of people have no friends in common on X and Facebook
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:3
+Enter a person's name ~:Ashely
+Invalid name or does not exist
+Enter a person's name ~:rfverg
+Invalid name or does not exist
+Enter a person's name ~:Katherine Olson
+--------------
+Friends in X
+**************
+Andrea Walsh
+Brady Cooper
+David Sanchez
+John Martin
+Jordan Hopkins
+Thomas Bass
+Wendy Mcdaniel
+--------------------
+Friends in Facebook
+********************
+George Stewart
+Roger Berger
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:4
+43% of people have more friends in X compared to Facebook
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:5
+The number of triangle friendships in X is: 2
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:6
+The number of triangle friendships in Facebook is: 1
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:7
+The number of triangle friendships in X merged with Facebook is:  12
+
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  
+Input a choice ~:
+Thank you

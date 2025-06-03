@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes - Aethra Notespace</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    /* 额外简单样式，配合折叠菜单 */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(193, 182, 182, 0.65);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(192, 185, 185, 0.5);
+      color: #222;
+    }
+    h2 {
+      color: #003366;
+    }
+    .course-category {
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: #007acc;
+      color: white;
+      margin: 10px 0;
+      border-radius: 6px;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+    .course-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      margin-left: 20px;
+      margin-bottom: 10px;
+      background: #e7f0ff;
+      border-radius: 6px;
+      padding-left: 10px;
+      color: #004080;
+    }
+    .course-list.open {
+      max-height: 500px; /* 视内容调整 */
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .course-list a {
+      display: block;
+      padding: 6px 8px;
+      color: #004080;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    .course-list a:hover {
+      background-color: #b3d1ff;
+    }
+    .fa-chevron-down, .fa-chevron-up {
+      transition: transform 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="note.html"><i class="fas fa-book"></i> Notes</a></li>
+      <li><a href="projects.html"><i class="fas fa-tools"></i> Projects</a></li>
+    </ul>
+  </nav>
+
+  <header id="hero" style="height: auto; padding: 40px 20px;">
+    <h1>Study Notes</h1>
+    <p> 
+        <strong>Course Abbreviations:</strong><br>
+        <strong>ECE</strong>: Electrical and Computer Engineering<br>
+        <strong>CSE</strong>: Computer Science and Engineering<br>
+        <strong>MTH</strong>: Mathematics<br>
+        <strong>PHY</strong>: Physics<br>
+        <br>
+        <strong>About:</strong><br>
+        This is a collection of my study notes, organized by course categories.
+        <br>
+    </p>
+  </header>
+
+  <main id="main">
+    <section>
+      <h2>Course Categories</h2>
+
+      <div class="course-category" data-target="ece-list">
+        ECE
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div id="ece-list" class="course-list">
+        <a href="ece201.html">ECE201&202: CIRCUITS AND SYSTEMS</a>
+        <a href="ece_course_file/ECE203/">ECE203: CIRCUITS LAB</a>
+        <a href="ECE/ECE230: DIGITAL LOGIC FUNDAMENTALS/">ECE230: DIGITAL LOGIC FUNDAMENTALS</a>
+        <a href="ECE/ECE280: ELECTRICAL ENGR ANALYSIS/">ECE280: ELECTRICAL ENGR ANALYSIS</a>
+        <a href="ECE/ECE331: MICROPROCESSORS & DIGITAL SYS/">ECE331: MICROPROCESSORS & DIGITAL SYS</a>
+        <a href="ECE/ECE390: ETHICS & PROF & CONT ISSUES/">ECE390: ETHICS & PROF & CONT ISSUES</a>
+        
+      </div>
+
+      <div class="course-category" data-target="cse-list">
+        CSE
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div id="cse-list" class="course-list">
+        <a href="cse_course_file/CSE231/">CSE231: INTRODUCTION TO PROGRAMMING I</a>
+        <a href="cse_course_file/CSE232/">CSE232: INTRODUCTION TO PROGRAMMING II</a>
+        <a href="CSE/CSE260: DISCRETE STRUCTURES COMP SCI/">CSE260: DISCRETE STRUCTURES COMP SCI</a>
+        <a href="CSE/CSE331: ALGORITHMS AND DATA STRUCTURES/">CSE331: ALGORITHMS AND DATA STRUCTURES</a>
+      </div>
+
+      <div class="course-category" data-target="mth-list">
+        MTH
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div id="mth-list" class="course-list">
+        <a href="mth132.html">MTH132: CALCULUS I</a>
+        <a href="mth133.html">MTH133: CALCULUS II</a>
+        <a href="mth234.html">MTH234: MULTIVARIABLE CALCULUS</a>
+        <a href="mth235.html">MTH235: DIFFERENTIAL EQUATIONS</a>
+      </div>
+
+
+      <div class="course-category" data-target="phy-list">
+        PHY 
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div id="phy-list" class="course-list">
+        <a href="PHY/PHY183: GENERAL PHYSICS I/">PHY183: GENERAL PHYSICS I</a>
+        <a href="phy184.html">PHY184: GENERAL PHYSICS I</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer style="text-align:center; margin: 40px 0;">
+    <p>&copy; 2025 Aethra Notespace. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const categories = document.querySelectorAll('.course-category');
+
+        categories.forEach(category => {
+        category.addEventListener('click', () => {
+            const targetId = category.getAttribute('data-target');
+            const courseList = document.getElementById(targetId);
+
+            // 切换 open class
+            courseList.classList.toggle('open');
+
+            // 切换图标方向
+            const icon = category.querySelector('i');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        });
+        });
+    });
+  </script>
+
+
+</body>
+</html>

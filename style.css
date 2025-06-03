@@ -1,0 +1,190 @@
+/* Global reset and body background setup */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('images/test_again.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  color: white;
+}
+
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+
+  opacity: 0;
+  animation: heroFadeIn 1s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* 初始遮罩 */
+  animation: maskFadeOut 3s ease forwards;
+  z-index: -1; /* 在背景图上，文字下 */
+}
+
+@keyframes maskFadeOut {
+  0% { background-color: rgba(0, 0, 0, 0.6); }
+  100% { background-color: rgba(0, 0, 0, 0); }
+}
+
+/* Hero title */
+#hero h1 {
+  font-size: 4.5em;
+  margin: 0;
+  color: white;
+
+  opacity: 0;
+  transform: scale(0.3); /* 初始缩小到30% */
+  animation: scaleFadeIn 2s ease forwards;
+  animation-delay: 0.3s; /* 延迟动画开始，可调 */
+}
+
+@keyframes scaleFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1); /* 放大到原始大小 */
+  }
+}
+
+
+/* Typewriter subtitle */
+#typewriter {
+  margin-top: 40px;
+  font-size: 2em;
+  border-right: 2px solid white;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { border-color: white; }
+  50% { border-color: transparent; }
+  100% { border-color: white; }
+}
+
+/* Scroll down arrow */
+#scroll-down {
+  position: absolute;
+  bottom: 40px;
+  font-size: 2em;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#contact {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.icon-link {
+  font-size: 2.5em;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon-link:hover {
+  transform: scale(1.2);
+  color: #00d4ff; /* 鼠标悬停时变色（可选） */
+}
+/* Show scroll down arrow after hero section */
+
+/* Navbar styles */
+
+/* 固定右上角导航栏，无边框、透明背景 */
+#navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  border-radius: 0 0 0 12px;
+  z-index: 9999;
+  backdrop-filter: blur(6px); /* 模糊背景，提升视觉效果 */
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+  transform: scale(1.1);
+  color: #00d4ff;
+}
+
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Main content after hero */
+#main-index {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(193, 182, 182, 0.65);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(192, 185, 185, 0.5);
+  min-height: 60vh; /* 避免内容没高度 */
+  overflow: hidden;
+}
+
+.main-content-scale {
+  transform: scale(0);         /* 初始缩放为0 */
+  opacity: 0;                  /* 初始透明 */
+  transform-origin: top center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+

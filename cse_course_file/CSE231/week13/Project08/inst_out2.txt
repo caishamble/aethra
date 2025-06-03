@@ -1,0 +1,75 @@
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:rover
+
+:~Enter value for Magnitude (N)~: 270
+
+:~Enter value for Angle (degrees)~: 0
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:fido
+
+:~Enter value for Magnitude (N)~: 300
+
+:~Enter value for Angle (degrees)~: 60
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:3
+
+Force objects in the calculator
+
+Force #01: rover
+Magnitude: 270.00
+Angle: 0.00
+Force #02: fido
+Magnitude: 300.00
+Angle: 60.00
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:5
+
+Resultant force of all forces in the calculator
+Magnitude: 493.86
+Angle: 31.74
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:7

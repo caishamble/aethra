@@ -1,0 +1,133 @@
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:f1
+
+:~Enter value for Magnitude (N)~: 985
+
+:~Enter value for Angle (degrees)~: 31
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:f2
+
+:~Enter value for Magnitude (N)~: 788
+
+:~Enter value for Angle (degrees)~: 122
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:f3
+
+:~Enter value for Magnitude (N)~: 411
+
+:~Enter value for Angle (degrees)~: 233
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:f4
+
+:~Enter value for Magnitude (N)~: 300
+
+:~Enter value for Angle (degrees)~: 60
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:3
+
+Force objects in the calculator
+
+Force #01: f1
+Magnitude: 985.00
+Angle: 31.00
+Force #02: f2
+Magnitude: 788.00
+Angle: 122.00
+Force #03: f3
+Magnitude: 411.00
+Angle: 233.00
+Force #04: f4
+Magnitude: 300.00
+Angle: 60.00
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:2
+
+:~Enter name of force~:f4
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:3
+
+Force objects in the calculator
+
+Force #01: f1
+Magnitude: 985.00
+Angle: 31.00
+Force #02: f2
+Magnitude: 788.00
+Angle: 122.00
+Force #03: f3
+Magnitude: 411.00
+Angle: 233.00
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:7

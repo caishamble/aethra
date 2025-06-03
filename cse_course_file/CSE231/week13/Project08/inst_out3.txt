@@ -1,0 +1,114 @@
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:2
+
+:~Enter name of force~:f1
+
+Force object f1 does not exist!
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:4
+
+:~Enter name of force~:f1
+
+Force object f1 does not exist!
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:3
+
+There are no force objects in the calculator.
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:5
+
+Resultant force of all forces in the calculator
+Magnitude: 0.00
+Angle: 0.00
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:f1
+
+:~Enter value for Magnitude (N)~: 50
+
+:~Enter value for Angle (degrees)~: 90
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:1
+
+:~Enter name of force~:f1
+
+:~Enter value for Magnitude (N)~: 50
+
+:~Enter value for Angle (degrees)~: 90
+
+Force object f1 already exists!
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:3
+
+Force objects in the calculator
+
+Force #01: f1
+Magnitude: 50.00
+Angle: 90.00
+
+:~Net Force Calculator Program
+          1) Add force
+          2) Remove force
+          3) Show forces
+          4) Find force components
+          5) Compute resultant force
+          6) Reset calculator
+          7) Stop the program
+          Enter option~:7

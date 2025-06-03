@@ -1,0 +1,25 @@
+HELP_MENU = "\nCrossword Puzzler -- Press H at any time to bring up this menu" \
+                "\nC n - Display n of the current puzzle's down and across clues" \
+                "\nG i j A/D - Make a guess for the clue starting at row i, column j" \
+                "\nR i j A/D - Reveal the answer for the clue starting at row i, column j" \
+                "\nT i j A/D - Gives a hint (first wrong letter) for the clue starting at row i, column j" \
+                "\nH - Display the menu" \
+                "\nS - Restart the game" \
+                "\nQ - Quit the program"
+
+
+OPTION_PROMPT = "\nEnter option: "
+PUZZLE_PROMPT = "Enter the filename of the puzzle you want to play: "
+PUZZLE_FILE_ERROR = "No puzzle found with that filename. Try Again.\n"
+
+"\nAcross"
+"\nDown"
+"\nPuzzle solved! Congratulations!"
+"Letter {} is wrong, it should be {}"
+"Invalid option/arguments. Type 'H' for help."
+"Enter your guess (use _ for blanks): "
+"This clue is already correct!"
+
+
+RuntimeError("Guess length does not match the length of the clue.\n")
+RuntimeError("Guess contains invalid characters.\n")

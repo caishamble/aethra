@@ -1,0 +1,34 @@
+choices = '''
+  Menu : 
+     1: Max number of friends intersection between X and Facebook among all
+     2: Percentage of people with no shared friends between X and Facebook
+     3: Individual information
+     4: Percentage of people with  more friends in X compared to Facebook
+     5: The number of  triangle friendships in X
+     6: The number of  triangle friendships on Facebook
+     7: The number of  triangle friendships in X and Facebook together 
+       Enter any other key(s) to exit
+
+  '''
+
+"Input a choice ~:"
+
+"Error. File does not exist"
+"\nEnter a names file ~:"
+"\nEnter the twitter id file ~:"
+"\nEnter the facebook id file ~:"
+
+"The Max number intersection of friends between X and Facebook is: {}"
+"{}% of people have no friends in common on X and Facebook"
+
+"Enter a person's name ~:"
+"-"*14+"\nFriends in X\n"+"*"*14
+"-"*20+"\nFriends in Facebook\n"+"*"*20
+"Invalid name or does not exist"
+
+"{}% of people have more friends in X compared to Facebook"
+
+"The number of triangle friendships in X is: {}"
+"The number of triangle friendships in Facebook is: {}"
+"The number of triangle friendships in X merged with Facebook is:  {}"
+"Thank you"
