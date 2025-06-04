@@ -50,11 +50,23 @@
   <nav id="navbar">
     <ul>
       <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
-      <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="notes.html"><i class="fas fa-book"></i> Notes</a></li>
-      <li><a href="projects.html"><i class="fas fa-tools"></i> Projects</a></li>
+      <li><a href="index.html" onclick="forceReload(event, 'index.html')"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="notes.html" onclick="forceReload(event, 'notes.html')"><i class="fas fa-book"></i> Notes</a></li>
+      <li><a href="projects.html" onclick="forceReload(event, 'projects.html')"><i class="fas fa-tools"></i> Projects</a></li>
     </ul>
   </nav>
+
+  <script>
+    function forceReload(event, targetPage) {
+      const current = window.location.pathname.split('/').pop(); // 当前页面名
+      if (current === targetPage) {
+        event.preventDefault(); // 阻止默认跳转
+        window.location.reload(); // 强制刷新
+      }
+      // 否则照常跳转
+    }
+  </script>
+
 
   <header id = "hero">
     <h1>Aethra Notespace</h1>
