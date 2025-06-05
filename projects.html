@@ -19,12 +19,14 @@
             color: #fff;
         }
         .overlay {
+            /* 使用均匀的黑色半透明遮罩，避免上下亮度不一致 */
             background: rgba(0,0,0,0.6);
             min-height: 100vh;
             width: 100%;
-            position: absolute;
+            position: fixed;
             top: 0; left: 0;
             z-index: 0;
+            pointer-events: none;
         }
         .container {
             position: relative;
@@ -210,7 +212,28 @@
                     </div>
                 </div>
             </a>
-            <!-- 更多项目可以继续添加 -->
+            <!-- Project 4 -->
+            <a class="project-card" href="https://github.com/caishamble/Hexadecimal_Counters_via_74LS161_IC" target="_blank">
+                <img class="project-image" src="images/project_four.png" alt="Project 4">
+                <div class="project-content">
+                    <div class="project-title">HexaCount: Hexadecimal Counter with 74LS161 IC</div>
+                    <div class="project-desc">
+                        This project implements hexadecimal counters using the 74LS161 synchronous 4-bit binary counter IC. It explores the logic design, wiring, and counting behavior through schematic diagrams and simulations, demonstrating how multiple 74LS161 chips can be cascaded to achieve extended HexaCount in digital systems.
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 5 -->
+            <a class="project-card" href="https://www.researchgate.net/publication/391492160_Verilog_vs_C_for_Matrix_Multiplication_A_Performance_Comparison_on_FPGA_and_ARM_CPU" target="_blank">
+                <img class="project-image" src="images/project_five.png" alt="Project 5">
+                <div class="project-content">
+                    <div class="project-title">Verilog vs C in Matrix Multiplication</div>
+                    <div class="project-desc">
+                        This project compares 3×3 matrix multiplication using Verilog on FPGA and C on ARM CPU. Results show FPGA runs faster due to hardware parallelism, while ARM is easier to develop but slower. The study highlights performance versus development trade-offs in hardware and software approaches.
+                    </div>
+                </div>
+            </a>
+
         </main>
     </div>
     <script>
