@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- 保持背景图片与index.html一致 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('images/test_again.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #fff;
+        }
+        .overlay {
+            background: rgba(0,0,0,0.6);
+            min-height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 60px 0 40px 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .typing {
+            font-size: 1.3rem;
+            color: #e1e0de;
+            text-align: center;
+            min-height: 2.2em;
+            margin-bottom: 40px;
+            font-family: 'Fira Mono', 'Consolas', monospace;
+            white-space: pre;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .project-card {
+            background: rgba(219, 216, 216, 0.85);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(217, 216, 216, 0.2);
+            overflow: hidden;
+            width: 320px;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(235, 234, 231, 0.25), 0 4px 16px rgba(0,0,0,0.3);
+            background: rgba(195, 191, 191, 0.95);
+        }
+        .project-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #222;
+        }
+        .project-content {
+            padding: 18px 20px 20px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #101010;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+        }
+        .project-card {
+            flex-direction: row;
+            width: 700px;
+            max-width: 95vw;
+            min-height: 200px;
+            align-items: stretch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .project-image {
+            width: 240px;
+            height: 100%;
+            min-height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .project-content {
+            padding: 24px 28px 24px 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media (max-width: 800px) {
+            .project-card {
+            flex-direction: column;
+            width: 98vw;
+            max-width: 370px;
+            }
+            .project-image {
+            width: 100%;
+            height: 180px;
+            min-height: unset;
+            border-radius: 16px 16px 0 0;
+            }
+            .project-content {
+            padding: 18px 20px 20px 20px;
+            }
+        }
+        .project-desc {
+            font-size: 0.85rem;
+            color: #3c3b3b;
+        }
+        @media (max-width: 700px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                width: 95vw;
+                max-width: 370px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+        <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
+        <li><a href="index.html" onclick="forceReload(event, 'index.html')"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="notes.html" onclick="forceReload(event, 'notes.html')"><i class="fas fa-book"></i> Notes</a></li>
+        <li><a href="projects.html" onclick="forceReload(event, 'projects.html')"><i class="fas fa-tools"></i> Projects</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function forceReload(event, targetPage) {
+        const current = window.location.pathname.split('/').pop(); // 当前页面名
+        if (current === targetPage) {
+            event.preventDefault(); // 阻止默认跳转
+            window.location.reload(); // 强制刷新
+        }
+        // 否则照常跳转
+        }
+    </script>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="typing" id="typing"></div>
+        <main>
+            <!-- Project 1 -->
+            <a class="project-card" href="https://github.com/caishamble/Pipeline_Inspection_Robot?tab=readme-ov-file" target="_blank">
+                <img class="project-image" src="images/project_one.png" alt="Project 1">
+                <div class="project-content">
+                    <div class="project-title">NDE Pipeline Inspection Robot</div>
+                    <div class="project-desc">
+                        This project develops a pipeline inspection robot using non-destructive evaluation (NDE) techniques. The robot enters pipelines and performs tasks without causing damage. It supports forward/backward movement, detects issues, and provides feedback. Control circuits manage movement, and a Finite State Machine (FSM) with Verilog code is implemented. Simulations with two data sets are conducted for evaluation.
+                    </div>
+                </div>
+            </a>
+            <!-- Project 2 -->
+            <a class="project-card" href="https://github.com/programmeruser517/C2L" target="_blank">
+                <img class="project-image" src="images/project_two.png" alt="Project 2">
+                <div class="project-content">
+                    <div class="project-title">C2L-Connect to Learn</div>
+                    <div class="project-desc">
+                        Connect2Learn is a mobile app that fosters an academic social network connecting students with learning opportunities, study partners, and resources. Built with Dart and Flutter, it lets users create profiles, browse or post study content, and engage with peers. Its goal is to enhance collaboration, knowledge sharing, and academic success in a supportive digital environment for students.
+                    </div>
+                </div>
+            </a>
+            <!-- Project 3 -->
+            <a class="project-card" href="https://devpost.com/software/plowee" target="_blank">
+                <img class="project-image" src="images/project_three.png" alt="Project 3">
+                <div class="project-content">
+                    <div class="project-title">Plowee</div>
+                    <div class="project-desc">
+                        Plowee uses Flutter for mobile development and Raspberry Pi hardware for real-time snowplow tracking. It integrates OpenAI for road condition analysis and employs SQL and Supabase for data management, enhancing community winter road safety and management efficiency.
+                    </div>
+                </div>
+            </a>
+            <!-- 更多项目可以继续添加 -->
+        </main>
+    </div>
+    <script>
+        // Typing effect for subtitle
+        const text = "Bridging what we thought and reality.";
+        const typingDiv = document.getElementById('typing');
+        let idx = 0;
+        function type() {
+            if (idx <= text.length) {
+                typingDiv.textContent = text.slice(0, idx);
+                idx++;
+                setTimeout(type, 55);
+            }
+        }
+        type();
+    </script>
+</body>
+</html>

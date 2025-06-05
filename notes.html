@@ -69,25 +69,25 @@
 </head>
 
 <body>
-  <nav id="navbar">
-    <ul>
-      <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
-      <li><a href="index.html" onclick="forceReload(event, 'index.html')"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="notes.html" onclick="forceReload(event, 'notes.html')"><i class="fas fa-book"></i> Notes</a></li>
-      <li><a href="projects.html" onclick="forceReload(event, 'projects.html')"><i class="fas fa-tools"></i> Projects</a></li>
-    </ul>
-  </nav>
+<nav id="navbar">
+  <ul>
+    <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
+    <li><a href="index.html" onclick="forceReload(event, 'index.html')"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="notes.html" onclick="forceReload(event, 'notes.html')"><i class="fas fa-book"></i> Notes</a></li>
+    <li><a href="projects.html" onclick="forceReload(event, 'projects.html')"><i class="fas fa-tools"></i> Projects</a></li>
+  </ul>
+</nav>
 
-  <script>
-    function forceReload(event, targetPage) {
-      const current = window.location.pathname.split('/').pop(); // 当前页面名
-      if (current === targetPage) {
-        event.preventDefault(); // 阻止默认跳转
-        window.location.reload(); // 强制刷新
-      }
-      // 否则照常跳转
+<script>
+  function forceReload(event, targetPage) {
+    const current = window.location.pathname.split('/').pop(); // 当前页面名
+    if (current === targetPage) {
+      event.preventDefault(); // 阻止默认跳转
+      window.location.reload(); // 强制刷新
     }
-  </script>
+    // 否则照常跳转
+  }
+</script>
 
 
   <header id="hero" style="height: auto; padding: 40px 20px;">
