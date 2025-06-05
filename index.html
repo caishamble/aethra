@@ -27,26 +27,31 @@
 
   window.onload = typeWriter;
 
-  // 显示下箭头
+  // 进入页面时显示下箭头，滚动时隐藏
+  window.addEventListener("DOMContentLoaded", () => {
+    const scrollDown = document.getElementById("scroll-down");
+    scrollDown.style.opacity = 1;
+  });
+
   window.addEventListener("scroll", () => {
     const scrollDown = document.getElementById("scroll-down");
     if (window.scrollY > 50) {
-      scrollDown.style.opacity = 1;
-    } else {
       scrollDown.style.opacity = 0;
+    } else {
+      scrollDown.style.opacity = 1;
     }
   });
 
   // 平滑滚动到 main
   function scrollToContent() {
-    document.getElementById("main-content").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("main-index").scrollIntoView({ behavior: "smooth" });
   }
 </script>
 
 
 
 <body>
-
+<!-- 空元素用于后续扩展或页面结构一致性，无需添加内容 -->
   <nav id="navbar">
     <ul>
       <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>

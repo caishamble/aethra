@@ -237,15 +237,28 @@
         </main>
     </div>
     <script>
-        // Typing effect for subtitle
+        // Typing effect for subtitle with blinking cursor always blinking during typing
         const text = "Bridging what we thought and reality.";
         const typingDiv = document.getElementById('typing');
         let idx = 0;
+        let cursorVisible = true;
+
+        // Start blinking cursor (faster blink)
+        setInterval(() => {
+            cursorVisible = !cursorVisible;
+            if (idx <= text.length) {
+            typingDiv.textContent = text.slice(0, idx) + (cursorVisible ? "|" : " ");
+            } else {
+            typingDiv.textContent = text + (cursorVisible ? "|" : " ");
+            }
+        }, 400); // Blink every 250ms
+
+        // Typing effect
         function type() {
             if (idx <= text.length) {
-                typingDiv.textContent = text.slice(0, idx);
-                idx++;
-                setTimeout(type, 55);
+            typingDiv.textContent = text.slice(0, idx) + (cursorVisible ? "|" : " ");
+            idx++;
+            setTimeout(type, 100);
             }
         }
         type();
