@@ -69,14 +69,217 @@
 </head>
 
 <body>
-<nav id="navbar">
-  <ul>
-    <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
-    <li><a href="index.html" onclick="forceReload(event, 'index.html')"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="notes.html" onclick="forceReload(event, 'notes.html')"><i class="fas fa-book"></i> Notes</a></li>
-    <li><a href="projects.html" onclick="forceReload(event, 'projects.html')"><i class="fas fa-tools"></i> Projects</a></li>
-  </ul>
-</nav>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#search" onclick="openSearchModal(event)"><i class="fas fa-search"></i> Search</a></li>
+      <li><a href="index.html" onclick="forceReload(event, 'index.html')"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="notes.html" onclick="forceReload(event, 'notes.html')"><i class="fas fa-book"></i> Notes</a></li>
+      <li><a href="projects.html" onclick="forceReload(event, 'projects.html')"><i class="fas fa-tools"></i> Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- </style>Centered Search Modal (moved outside nav/ul) -->
+  <div id="searchModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(240,242,247,0.85);">
+    <div style="background:#fff; width:100%; max-width:370px; margin:12vh auto; padding:28px 22px 18px 22px; border-radius:13px; box-shadow:0 8px 32px rgba(60,80,120,0.12); position:relative; text-align:center;">
+      <button onclick="closeSearchModal()" style="position:absolute; right:14px; top:10px; background:none; border:none; font-size:22px; color:#888; cursor:pointer;">&times;</button>
+      <h3 style="margin-top:0; color:#2a2a2a; font-weight:600;">Search</h3>
+      <div style="display:flex; align-items:center; border:1.5px solid #e0e4ef; border-radius:6px; background:#f7f9fc; padding:6px 10px; margin-bottom:14px; justify-content:center;">
+        <i class="fas fa-search" style="color:#b0b6c6; font-size:17px; margin-right:7px;"></i>
+        <div style="position:relative; flex:1; display:flex; align-items:center;">
+          <input id="searchInput" type="text" placeholder="Type a keyword..." autocomplete="off"
+            style="width:100%; border:none; outline:none; background:transparent; font-size:16px; color:#222; padding:4px 0; letter-spacing:0.01em;"
+            oninput="showSuggestions()" onkeydown="handleSearchKey(event)">
+          <span id="blink-cursor" style="position:absolute; right:7px; width:1.5px; height:19px; background:#3a3a3a; animation:blink 1s steps(1) infinite;"></span>
+        </div>
+      </div>
+      <div id="suggestions" style="text-align:left; margin:0 auto 8px auto; max-width:320px;"></div>
+      <div style="margin-top:14px; color:#a0a4b0; font-size:13px;">
+        <strong>Site Keywords:</strong>
+        <span id="siteKeywords" style="color:#7a7e8a;">notes, projects, computer engineering, study, EE, CS, learning, research, vlogs, USA, collaboration</span>
+      </div>
+    </div>
+  </div>
+  <style>
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .suggestion-link {
+    display:block;
+    padding:7px 12px;
+    border-radius:5px;
+    color:#2a2a2a;
+    text-decoration:none;
+    font-size:15px;
+    transition:background 0.15s;
+    margin-bottom:2px;
+  }
+  .suggestion-link:hover {
+    background:#e6eaf7;
+    color:#1a4ea0;
+  }
+  #searchModal input:focus + #blink-cursor,
+  #searchModal input:not(:focus) + #blink-cursor {
+    animation: blink 1s steps(1) infinite;
+  }
+  </style>
+  <script>
+  const siteKeywords = [
+    "notes", "projects", "computer engineering", "study", "EE", "CS", "learning", "blog", "contact", "research", "vlogs", "USA", "collaboration",
+    "ece201", "ece202", "ece203", "cse231", "cse232", "mth132", "mth133", "mth234", "mth235", "phy183", "phy184"
+  ];
+  const keywordLinks = {
+    "notes": "notes.html",
+    "projects": "projects.html",
+    "computer engineering": "notes.html",
+    "study": "notes.html",
+    "EE": "notes.html",
+    "CS": "notes.html",
+    "learning": "notes.html",
+    "blog": "index.html",
+    "contact": "#contact",
+    "research": "notes.html",
+    "vlogs": "index.html",
+    "USA": "index.html",
+    "collaboration": "#contact",
+    "ece201": "ece201.html",
+    "ece202": "ece202.html",
+    "ece203": "ece203.html",
+    "cse231": "cse231.html",
+    "cse232": "cse232.html",
+    "mth132": "mth132.html",
+    "mth133": "mth133.html",
+    "mth234": "mth234.html",
+    "mth235": "mth235.html",
+    "phy183": "phy183.html",
+    "phy184": "phy184.html",
+  };
+  function openSearchModal(event) {
+    event.preventDefault();
+    document.getElementById('searchModal').style.display = 'block';
+    document.getElementById('searchInput').value = '';
+    document.getElementById('suggestions').innerHTML = '';
+    setTimeout(() => document.getElementById('searchInput').focus(), 100);
+  }
+  function closeSearchModal() {
+    document.getElementById('searchModal').style.display = 'none';
+  }
+  function showSuggestions() {
+    const input = document.getElementById('searchInput').value.trim().toLowerCase();
+    const suggestionsDiv = document.getElementById('suggestions');
+    if (!input) {
+      suggestionsDiv.innerHTML = '';
+      return;
+    }
+    const matches = siteKeywords.filter(k => k.toLowerCase().includes(input));
+    if (matches.length) {
+      suggestionsDiv.innerHTML = matches.map(m =>
+        `<a class="suggestion-link" href="${keywordLinks[m] || '#'}" onclick="closeSearchModal()">${m}</a>`
+      ).join('');
+    } else {
+      suggestionsDiv.innerHTML = '<span style="color:#b00; font-size:15px;">No matching keywords found.</span>';
+    }
+  }
+  function handleSearchKey(e) {
+    if (e.key === 'Enter') {
+      const suggestions = document.querySelectorAll('#suggestions .suggestion-link');
+      if (suggestions.length) {
+        suggestions[0].click();
+      }
+    }
+  }
+  // Close modal on ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearchModal();
+  });
+  // Close modal when clicking outside
+  document.getElementById('searchModal').addEventListener('click', function(e) {
+    if (e.target === this) closeSearchModal();
+  });
+  // Close the modal when scrolling down
+  window.addEventListener('scroll', function() {
+    if (document.getElementById('searchModal').style.display === 'block') {
+      closeSearchModal();
+    }
+  });
+  </script>
+  <!-- 只弹出对话框，无灰色遮罩，且可正常输入和关闭 -->
+  <style>
+  #searchModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: transparent !important; /* 无遮罩 */
+  }
+  #searchModal .search-dialog {
+    background: #fff;
+    width: 100%;
+    max-width: 370px;
+    margin: 12vh auto;
+    padding: 28px 22px 18px 22px;
+    border-radius: 13px;
+    box-shadow: 0 8px 32px rgba(60,80,120,0.12);
+    position: relative;
+    text-align: center;
+  }
+  .suggestion-link {
+    display:block;
+    padding:7px 12px;
+    border-radius:5px;
+    color:#2a2a2a;
+    text-decoration:none;
+    font-size:15px;
+    transition:background 0.15s;
+    margin-bottom:2px;
+  }
+  .suggestion-link:hover {
+    background:#e6eaf7;
+    color:#1a4ea0;
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  /* 删除右侧多余的blink-cursor相关样式 */
+  /* 移除右侧多余的blink-cursor */
+  </style>
+  <div id="searchModal">
+    <div class="search-dialog" onclick="event.stopPropagation();">
+      <button onclick="closeSearchModal()" style="position:absolute; right:14px; top:10px; background:none; border:none; font-size:22px; color:#888; cursor:pointer;">&times;</button>
+      <h3 style="margin-top:0; color:#2a2a2a; font-weight:600;">Search</h3>
+      <div style="display:flex; align-items:center; border:1.5px solid #e0e4ef; border-radius:6px; background:#f7f9fc; padding:6px 10px; margin-bottom:14px; justify-content:center;">
+        <i class="fas fa-search" style="color:#b0b6c6; font-size:17px; margin-right:7px;"></i>
+        <input id="searchInput" type="text" placeholder="Type a keyword..." autocomplete="off"
+          style="width:100%; border:none; outline:none; background:transparent; font-size:16px; color:#222; padding:4px 0; letter-spacing:0.01em;"
+          oninput="showSuggestions()" onkeydown="handleSearchKey(event)">
+      </div>
+      <div id="suggestions" style="text-align:left; margin:0 auto 8px auto; max-width:320px;"></div>
+      <div style="margin-top:14px; color:#a0a4b0; font-size:13px;">
+        <strong>Site Keywords:</strong>
+        <span id="siteKeywords" style="color:#7a7e8a;">notes, projects, EE, CS, blog, contact</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 只允许点击对话框外关闭
+    document.getElementById('searchModal').addEventListener('click', function(e) {
+      if (e.target === this) closeSearchModal();
+    });
+  </script>
+  <script>
+    function forceReload(event, targetPage) {
+      const current = window.location.pathname.split('/').pop(); // 当前页面名
+      if (current === targetPage) {
+        event.preventDefault(); // 阻止默认跳转
+        window.location.reload(); // 强制刷新
+      }
+      // 否则照常跳转
+    }
+  </script>
 
 <script>
   function forceReload(event, targetPage) {
